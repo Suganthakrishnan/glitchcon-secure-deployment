@@ -1,0 +1,802 @@
+[
+    {
+        "ID":"CVE-2011-3374",
+        "Package":"apt",
+        "Severity":"LOW",
+        "Description":"It was found that apt-key in apt, all versions, do not correctly validate gpg keys with the master keyring, leading to a potential man-in-the-middle attack.",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"TEMP-0841856-B18BAF",
+        "Package":"bash",
+        "Severity":"LOW",
+        "Description":"No description available",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2022-0563",
+        "Package":"bsdutils",
+        "Severity":"LOW",
+        "Description":"A flaw was found in the util-linux chfn and chsh utilities when compiled with Readline support. The Readline library uses an \"INPUTRC\" environment variable to get a path to the library config file. When the library cannot parse the specified file, it prints an error message containing data from the file. This flaw allows an unprivileged user to read root-owned files, potentially leading to privilege escalation. This flaw affects util-linux versions prior to 2.37.4.",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2016-2781",
+        "Package":"coreutils",
+        "Severity":"LOW",
+        "Description":"chroot in GNU coreutils, when used with --userspec, allows local users to escape to the parent session via a crafted TIOCSTI ioctl call, which pushes characters to the terminal's input buffer.",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2017-18018",
+        "Package":"coreutils",
+        "Severity":"LOW",
+        "Description":"In GNU Coreutils through 8.29, chown-core.c in chown and chgrp does not prevent replacement of a plain file with a symlink during use of the POSIX \"-R -L\" options, which allows local users to modify the ownership of arbitrary files by leveraging a race condition.",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2022-27943",
+        "Package":"gcc-12-base",
+        "Severity":"LOW",
+        "Description":"libiberty\/rust-demangle.c in GNU GCC 11.2 allows stack consumption in demangle_const, as demonstrated by nm-new.",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2023-4039",
+        "Package":"gcc-12-base",
+        "Severity":"LOW",
+        "Description":"**DISPUTED**A failure in the -fstack-protector feature in GCC-based toolchains \nthat target AArch64 allows an attacker to exploit an existing buffer \noverflow in dynamically-sized local variables in your application \nwithout this being detected. This stack-protector failure only applies \nto C99-style dynamically-sized local variables or those created using \nalloca(). The stack-protector operates as intended for statically-sized \nlocal variables.\n\nThe default behavior when the stack-protector \ndetects an overflow is to terminate your application, resulting in \ncontrolled loss of availability. An attacker who can exploit a buffer \noverflow without triggering the stack-protector might be able to change \nprogram flow control to cause an uncontrolled loss of availability or to\n go further and affect confidentiality or integrity. NOTE: The GCC project argues that this is a missed hardening bug and not a vulnerability by itself.",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2022-3219",
+        "Package":"gpgv",
+        "Severity":"LOW",
+        "Description":"GnuPG can be made to spin on a relatively small input by (for example) crafting a public key with thousands of signatures attached, compressed down to just a few KB.",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2025-30258",
+        "Package":"gpgv",
+        "Severity":"LOW",
+        "Description":"In GnuPG before 2.5.5, if a user chooses to import a certificate with certain crafted subkey data that lacks a valid backsig or that has incorrect usage flags, the user loses the ability to verify signatures made from certain other signing keys, aka a \"verification DoS.\"",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2011-3374",
+        "Package":"libapt-pkg6.0",
+        "Severity":"LOW",
+        "Description":"It was found that apt-key in apt, all versions, do not correctly validate gpg keys with the master keyring, leading to a potential man-in-the-middle attack.",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2022-0563",
+        "Package":"libblkid1",
+        "Severity":"LOW",
+        "Description":"A flaw was found in the util-linux chfn and chsh utilities when compiled with Readline support. The Readline library uses an \"INPUTRC\" environment variable to get a path to the library config file. When the library cannot parse the specified file, it prints an error message containing data from the file. This flaw allows an unprivileged user to read root-owned files, potentially leading to privilege escalation. This flaw affects util-linux versions prior to 2.37.4.",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2010-4756",
+        "Package":"libc-bin",
+        "Severity":"LOW",
+        "Description":"The glob implementation in the GNU C Library (aka glibc or libc6) allows remote authenticated users to cause a denial of service (CPU and memory consumption) via crafted glob expressions that do not match any pathnames, as demonstrated by glob expressions in STAT commands to an FTP daemon, a different vulnerability than CVE-2010-2632.",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2018-20796",
+        "Package":"libc-bin",
+        "Severity":"LOW",
+        "Description":"In the GNU C Library (aka glibc or libc6) through 2.29, check_dst_limits_calc_pos_1 in posix\/regexec.c has Uncontrolled Recursion, as demonstrated by '(\\227|)(\\\\1\\\\1|t1|\\\\\\2537)+' in grep.",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2019-1010022",
+        "Package":"libc-bin",
+        "Severity":"LOW",
+        "Description":"GNU Libc current is affected by: Mitigation bypass. The impact is: Attacker may bypass stack guard protection. The component is: nptl. The attack vector is: Exploit stack buffer overflow vulnerability and use this bypass vulnerability to bypass stack guard. NOTE: Upstream comments indicate \"this is being treated as a non-security bug and no real threat.",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2019-1010023",
+        "Package":"libc-bin",
+        "Severity":"LOW",
+        "Description":"GNU Libc current is affected by: Re-mapping current loaded library with malicious ELF file. The impact is: In worst case attacker may evaluate privileges. The component is: libld. The attack vector is: Attacker sends 2 ELF files to victim and asks to run ldd on it. ldd execute code. NOTE: Upstream comments indicate \"this is being treated as a non-security bug and no real threat.",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2019-1010024",
+        "Package":"libc-bin",
+        "Severity":"LOW",
+        "Description":"GNU Libc current is affected by: Mitigation bypass. The impact is: Attacker may bypass ASLR using cache of thread stack and heap. The component is: glibc. NOTE: Upstream comments indicate \"this is being treated as a non-security bug and no real threat.",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2019-1010025",
+        "Package":"libc-bin",
+        "Severity":"LOW",
+        "Description":"GNU Libc current is affected by: Mitigation bypass. The impact is: Attacker may guess the heap addresses of pthread_created thread. The component is: glibc. NOTE: the vendor's position is \"ASLR bypass itself is not a vulnerability.",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2019-9192",
+        "Package":"libc-bin",
+        "Severity":"LOW",
+        "Description":"In the GNU C Library (aka glibc or libc6) through 2.29, check_dst_limits_calc_pos_1 in posix\/regexec.c has Uncontrolled Recursion, as demonstrated by '(|)(\\\\1\\\\1)*' in grep, a different issue than CVE-2018-20796. NOTE: the software maintainer disputes that this is a vulnerability because the behavior occurs only with a crafted pattern",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2010-4756",
+        "Package":"libc6",
+        "Severity":"LOW",
+        "Description":"The glob implementation in the GNU C Library (aka glibc or libc6) allows remote authenticated users to cause a denial of service (CPU and memory consumption) via crafted glob expressions that do not match any pathnames, as demonstrated by glob expressions in STAT commands to an FTP daemon, a different vulnerability than CVE-2010-2632.",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2018-20796",
+        "Package":"libc6",
+        "Severity":"LOW",
+        "Description":"In the GNU C Library (aka glibc or libc6) through 2.29, check_dst_limits_calc_pos_1 in posix\/regexec.c has Uncontrolled Recursion, as demonstrated by '(\\227|)(\\\\1\\\\1|t1|\\\\\\2537)+' in grep.",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2019-1010022",
+        "Package":"libc6",
+        "Severity":"LOW",
+        "Description":"GNU Libc current is affected by: Mitigation bypass. The impact is: Attacker may bypass stack guard protection. The component is: nptl. The attack vector is: Exploit stack buffer overflow vulnerability and use this bypass vulnerability to bypass stack guard. NOTE: Upstream comments indicate \"this is being treated as a non-security bug and no real threat.",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2019-1010023",
+        "Package":"libc6",
+        "Severity":"LOW",
+        "Description":"GNU Libc current is affected by: Re-mapping current loaded library with malicious ELF file. The impact is: In worst case attacker may evaluate privileges. The component is: libld. The attack vector is: Attacker sends 2 ELF files to victim and asks to run ldd on it. ldd execute code. NOTE: Upstream comments indicate \"this is being treated as a non-security bug and no real threat.",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2019-1010024",
+        "Package":"libc6",
+        "Severity":"LOW",
+        "Description":"GNU Libc current is affected by: Mitigation bypass. The impact is: Attacker may bypass ASLR using cache of thread stack and heap. The component is: glibc. NOTE: Upstream comments indicate \"this is being treated as a non-security bug and no real threat.",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2019-1010025",
+        "Package":"libc6",
+        "Severity":"LOW",
+        "Description":"GNU Libc current is affected by: Mitigation bypass. The impact is: Attacker may guess the heap addresses of pthread_created thread. The component is: glibc. NOTE: the vendor's position is \"ASLR bypass itself is not a vulnerability.",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2019-9192",
+        "Package":"libc6",
+        "Severity":"LOW",
+        "Description":"In the GNU C Library (aka glibc or libc6) through 2.29, check_dst_limits_calc_pos_1 in posix\/regexec.c has Uncontrolled Recursion, as demonstrated by '(|)(\\\\1\\\\1)*' in grep, a different issue than CVE-2018-20796. NOTE: the software maintainer disputes that this is a vulnerability because the behavior occurs only with a crafted pattern",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2025-1390",
+        "Package":"libcap2",
+        "Severity":"MEDIUM",
+        "Description":"The PAM module pam_cap.so of libcap configuration supports group names starting with \u201c@\u201d, during actual parsing, configurations not starting with \u201c@\u201d are incorrectly recognized as group names. This may result in nonintended users being granted an inherited capability set, potentially leading to security risks. Attackers can exploit this vulnerability to achieve local privilege escalation on systems where \/etc\/security\/capability.conf is used to configure user inherited privileges by constructing specific usernames.",
+        "Severity_Score":2,
+        "Risk_Score":20
+    },
+    {
+        "ID":"CVE-2022-27943",
+        "Package":"libgcc-s1",
+        "Severity":"LOW",
+        "Description":"libiberty\/rust-demangle.c in GNU GCC 11.2 allows stack consumption in demangle_const, as demonstrated by nm-new.",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2023-4039",
+        "Package":"libgcc-s1",
+        "Severity":"LOW",
+        "Description":"**DISPUTED**A failure in the -fstack-protector feature in GCC-based toolchains \nthat target AArch64 allows an attacker to exploit an existing buffer \noverflow in dynamically-sized local variables in your application \nwithout this being detected. This stack-protector failure only applies \nto C99-style dynamically-sized local variables or those created using \nalloca(). The stack-protector operates as intended for statically-sized \nlocal variables.\n\nThe default behavior when the stack-protector \ndetects an overflow is to terminate your application, resulting in \ncontrolled loss of availability. An attacker who can exploit a buffer \noverflow without triggering the stack-protector might be able to change \nprogram flow control to cause an uncontrolled loss of availability or to\n go further and affect confidentiality or integrity. NOTE: The GCC project argues that this is a missed hardening bug and not a vulnerability by itself.",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2024-2236",
+        "Package":"libgcrypt20",
+        "Severity":"MEDIUM",
+        "Description":"A timing-based side-channel flaw was found in libgcrypt's RSA implementation. This issue may allow a remote attacker to initiate a Bleichenbacher-style attack, which can lead to the decryption of RSA ciphertexts.",
+        "Severity_Score":2,
+        "Risk_Score":20
+    },
+    {
+        "ID":"CVE-2018-6829",
+        "Package":"libgcrypt20",
+        "Severity":"LOW",
+        "Description":"cipher\/elgamal.c in Libgcrypt through 1.8.2, when used to encrypt messages directly, improperly encodes plaintexts, which allows attackers to obtain sensitive information by reading ciphertext data (i.e., it does not have semantic security in face of a ciphertext-only attack). The Decisional Diffie-Hellman (DDH) assumption does not hold for Libgcrypt's ElGamal implementation.",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2011-3389",
+        "Package":"libgnutls30",
+        "Severity":"LOW",
+        "Description":"The SSL protocol, as used in certain configurations in Microsoft Windows and Microsoft Internet Explorer, Mozilla Firefox, Google Chrome, Opera, and other products, encrypts data by using CBC mode with chained initialization vectors, which allows man-in-the-middle attackers to obtain plaintext HTTP headers via a blockwise chosen-boundary attack (BCBA) on an HTTPS session, in conjunction with JavaScript code that uses (1) the HTML5 WebSocket API, (2) the Java URLConnection API, or (3) the Silverlight WebClient API, aka a \"BEAST\" attack.",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2024-26462",
+        "Package":"libgssapi-krb5-2",
+        "Severity":"MEDIUM",
+        "Description":"Kerberos 5 (aka krb5) 1.21.2 contains a memory leak vulnerability in \/krb5\/src\/kdc\/ndr.c.",
+        "Severity_Score":2,
+        "Risk_Score":20
+    },
+    {
+        "ID":"CVE-2025-24528",
+        "Package":"libgssapi-krb5-2",
+        "Severity":"MEDIUM",
+        "Description":"A flaw was found in krb5. With incremental propagation enabled, an authenticated attacker can cause kadmind to write beyond the end of the mapped region for the iprop log file. This issue can trigger a process crash and lead to a denial of service.",
+        "Severity_Score":2,
+        "Risk_Score":20
+    },
+    {
+        "ID":"CVE-2018-5709",
+        "Package":"libgssapi-krb5-2",
+        "Severity":"LOW",
+        "Description":"An issue was discovered in MIT Kerberos 5 (aka krb5) through 1.16. There is a variable \"dbentry->n_key_data\" in kadmin\/dbutil\/dump.c that can store 16-bit data but unknowingly the developer has assigned a \"u4\" variable to it, which is for 32-bit data. An attacker can use this vulnerability to affect other artifacts of the database as we know that a Kerberos database dump file contains trusted data.",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2024-26458",
+        "Package":"libgssapi-krb5-2",
+        "Severity":"LOW",
+        "Description":"Kerberos 5 (aka krb5) 1.21.2 contains a memory leak in \/krb5\/src\/lib\/rpc\/pmap_rmt.c.",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2024-26461",
+        "Package":"libgssapi-krb5-2",
+        "Severity":"LOW",
+        "Description":"Kerberos 5 (aka krb5) 1.21.2 contains a memory leak vulnerability in \/krb5\/src\/lib\/gssapi\/krb5\/k5sealv3.c.",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2024-26462",
+        "Package":"libk5crypto3",
+        "Severity":"MEDIUM",
+        "Description":"Kerberos 5 (aka krb5) 1.21.2 contains a memory leak vulnerability in \/krb5\/src\/kdc\/ndr.c.",
+        "Severity_Score":2,
+        "Risk_Score":20
+    },
+    {
+        "ID":"CVE-2025-24528",
+        "Package":"libk5crypto3",
+        "Severity":"MEDIUM",
+        "Description":"A flaw was found in krb5. With incremental propagation enabled, an authenticated attacker can cause kadmind to write beyond the end of the mapped region for the iprop log file. This issue can trigger a process crash and lead to a denial of service.",
+        "Severity_Score":2,
+        "Risk_Score":20
+    },
+    {
+        "ID":"CVE-2018-5709",
+        "Package":"libk5crypto3",
+        "Severity":"LOW",
+        "Description":"An issue was discovered in MIT Kerberos 5 (aka krb5) through 1.16. There is a variable \"dbentry->n_key_data\" in kadmin\/dbutil\/dump.c that can store 16-bit data but unknowingly the developer has assigned a \"u4\" variable to it, which is for 32-bit data. An attacker can use this vulnerability to affect other artifacts of the database as we know that a Kerberos database dump file contains trusted data.",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2024-26458",
+        "Package":"libk5crypto3",
+        "Severity":"LOW",
+        "Description":"Kerberos 5 (aka krb5) 1.21.2 contains a memory leak in \/krb5\/src\/lib\/rpc\/pmap_rmt.c.",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2024-26461",
+        "Package":"libk5crypto3",
+        "Severity":"LOW",
+        "Description":"Kerberos 5 (aka krb5) 1.21.2 contains a memory leak vulnerability in \/krb5\/src\/lib\/gssapi\/krb5\/k5sealv3.c.",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2024-26462",
+        "Package":"libkrb5-3",
+        "Severity":"MEDIUM",
+        "Description":"Kerberos 5 (aka krb5) 1.21.2 contains a memory leak vulnerability in \/krb5\/src\/kdc\/ndr.c.",
+        "Severity_Score":2,
+        "Risk_Score":20
+    },
+    {
+        "ID":"CVE-2025-24528",
+        "Package":"libkrb5-3",
+        "Severity":"MEDIUM",
+        "Description":"A flaw was found in krb5. With incremental propagation enabled, an authenticated attacker can cause kadmind to write beyond the end of the mapped region for the iprop log file. This issue can trigger a process crash and lead to a denial of service.",
+        "Severity_Score":2,
+        "Risk_Score":20
+    },
+    {
+        "ID":"CVE-2018-5709",
+        "Package":"libkrb5-3",
+        "Severity":"LOW",
+        "Description":"An issue was discovered in MIT Kerberos 5 (aka krb5) through 1.16. There is a variable \"dbentry->n_key_data\" in kadmin\/dbutil\/dump.c that can store 16-bit data but unknowingly the developer has assigned a \"u4\" variable to it, which is for 32-bit data. An attacker can use this vulnerability to affect other artifacts of the database as we know that a Kerberos database dump file contains trusted data.",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2024-26458",
+        "Package":"libkrb5-3",
+        "Severity":"LOW",
+        "Description":"Kerberos 5 (aka krb5) 1.21.2 contains a memory leak in \/krb5\/src\/lib\/rpc\/pmap_rmt.c.",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2024-26461",
+        "Package":"libkrb5-3",
+        "Severity":"LOW",
+        "Description":"Kerberos 5 (aka krb5) 1.21.2 contains a memory leak vulnerability in \/krb5\/src\/lib\/gssapi\/krb5\/k5sealv3.c.",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2024-26462",
+        "Package":"libkrb5support0",
+        "Severity":"MEDIUM",
+        "Description":"Kerberos 5 (aka krb5) 1.21.2 contains a memory leak vulnerability in \/krb5\/src\/kdc\/ndr.c.",
+        "Severity_Score":2,
+        "Risk_Score":20
+    },
+    {
+        "ID":"CVE-2025-24528",
+        "Package":"libkrb5support0",
+        "Severity":"MEDIUM",
+        "Description":"A flaw was found in krb5. With incremental propagation enabled, an authenticated attacker can cause kadmind to write beyond the end of the mapped region for the iprop log file. This issue can trigger a process crash and lead to a denial of service.",
+        "Severity_Score":2,
+        "Risk_Score":20
+    },
+    {
+        "ID":"CVE-2018-5709",
+        "Package":"libkrb5support0",
+        "Severity":"LOW",
+        "Description":"An issue was discovered in MIT Kerberos 5 (aka krb5) through 1.16. There is a variable \"dbentry->n_key_data\" in kadmin\/dbutil\/dump.c that can store 16-bit data but unknowingly the developer has assigned a \"u4\" variable to it, which is for 32-bit data. An attacker can use this vulnerability to affect other artifacts of the database as we know that a Kerberos database dump file contains trusted data.",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2024-26458",
+        "Package":"libkrb5support0",
+        "Severity":"LOW",
+        "Description":"Kerberos 5 (aka krb5) 1.21.2 contains a memory leak in \/krb5\/src\/lib\/rpc\/pmap_rmt.c.",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2024-26461",
+        "Package":"libkrb5support0",
+        "Severity":"LOW",
+        "Description":"Kerberos 5 (aka krb5) 1.21.2 contains a memory leak vulnerability in \/krb5\/src\/lib\/gssapi\/krb5\/k5sealv3.c.",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2022-0563",
+        "Package":"libmount1",
+        "Severity":"LOW",
+        "Description":"A flaw was found in the util-linux chfn and chsh utilities when compiled with Readline support. The Readline library uses an \"INPUTRC\" environment variable to get a path to the library config file. When the library cannot parse the specified file, it prints an error message containing data from the file. This flaw allows an unprivileged user to read root-owned files, potentially leading to privilege escalation. This flaw affects util-linux versions prior to 2.37.4.",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2023-50495",
+        "Package":"libncursesw6",
+        "Severity":"MEDIUM",
+        "Description":"NCurse v6.4-20230418 was discovered to contain a segmentation fault via the component _nc_wrap_entry().",
+        "Severity_Score":2,
+        "Risk_Score":20
+    },
+    {
+        "ID":"CVE-2024-10041",
+        "Package":"libpam-modules",
+        "Severity":"MEDIUM",
+        "Description":"A vulnerability was found in PAM. The secret information is stored in memory, where the attacker can trigger the victim program to execute by sending characters to its standard input (stdin). As this occurs, the attacker can train the branch predictor to execute an ROP chain speculatively. This flaw could result in leaked passwords, such as those found in \/etc\/shadow while performing authentications.",
+        "Severity_Score":2,
+        "Risk_Score":20
+    },
+    {
+        "ID":"CVE-2024-22365",
+        "Package":"libpam-modules",
+        "Severity":"MEDIUM",
+        "Description":"linux-pam (aka Linux PAM) before 1.6.0 allows attackers to cause a denial of service (blocked login process) via mkfifo because the openat call (for protect_dir) lacks O_DIRECTORY.",
+        "Severity_Score":2,
+        "Risk_Score":20
+    },
+    {
+        "ID":"CVE-2024-10041",
+        "Package":"libpam-modules-bin",
+        "Severity":"MEDIUM",
+        "Description":"A vulnerability was found in PAM. The secret information is stored in memory, where the attacker can trigger the victim program to execute by sending characters to its standard input (stdin). As this occurs, the attacker can train the branch predictor to execute an ROP chain speculatively. This flaw could result in leaked passwords, such as those found in \/etc\/shadow while performing authentications.",
+        "Severity_Score":2,
+        "Risk_Score":20
+    },
+    {
+        "ID":"CVE-2024-22365",
+        "Package":"libpam-modules-bin",
+        "Severity":"MEDIUM",
+        "Description":"linux-pam (aka Linux PAM) before 1.6.0 allows attackers to cause a denial of service (blocked login process) via mkfifo because the openat call (for protect_dir) lacks O_DIRECTORY.",
+        "Severity_Score":2,
+        "Risk_Score":20
+    },
+    {
+        "ID":"CVE-2024-10041",
+        "Package":"libpam-runtime",
+        "Severity":"MEDIUM",
+        "Description":"A vulnerability was found in PAM. The secret information is stored in memory, where the attacker can trigger the victim program to execute by sending characters to its standard input (stdin). As this occurs, the attacker can train the branch predictor to execute an ROP chain speculatively. This flaw could result in leaked passwords, such as those found in \/etc\/shadow while performing authentications.",
+        "Severity_Score":2,
+        "Risk_Score":20
+    },
+    {
+        "ID":"CVE-2024-22365",
+        "Package":"libpam-runtime",
+        "Severity":"MEDIUM",
+        "Description":"linux-pam (aka Linux PAM) before 1.6.0 allows attackers to cause a denial of service (blocked login process) via mkfifo because the openat call (for protect_dir) lacks O_DIRECTORY.",
+        "Severity_Score":2,
+        "Risk_Score":20
+    },
+    {
+        "ID":"CVE-2024-10041",
+        "Package":"libpam0g",
+        "Severity":"MEDIUM",
+        "Description":"A vulnerability was found in PAM. The secret information is stored in memory, where the attacker can trigger the victim program to execute by sending characters to its standard input (stdin). As this occurs, the attacker can train the branch predictor to execute an ROP chain speculatively. This flaw could result in leaked passwords, such as those found in \/etc\/shadow while performing authentications.",
+        "Severity_Score":2,
+        "Risk_Score":20
+    },
+    {
+        "ID":"CVE-2024-22365",
+        "Package":"libpam0g",
+        "Severity":"MEDIUM",
+        "Description":"linux-pam (aka Linux PAM) before 1.6.0 allows attackers to cause a denial of service (blocked login process) via mkfifo because the openat call (for protect_dir) lacks O_DIRECTORY.",
+        "Severity_Score":2,
+        "Risk_Score":20
+    },
+    {
+        "ID":"CVE-2022-0563",
+        "Package":"libsmartcols1",
+        "Severity":"LOW",
+        "Description":"A flaw was found in the util-linux chfn and chsh utilities when compiled with Readline support. The Readline library uses an \"INPUTRC\" environment variable to get a path to the library config file. When the library cannot parse the specified file, it prints an error message containing data from the file. This flaw allows an unprivileged user to read root-owned files, potentially leading to privilege escalation. This flaw affects util-linux versions prior to 2.37.4.",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2021-45346",
+        "Package":"libsqlite3-0",
+        "Severity":"LOW",
+        "Description":"A Memory Leak vulnerability exists in SQLite Project SQLite3 3.35.1 and 3.37.0 via maliciously crafted SQL Queries (made via editing the Database File), it is possible to query a record, and leak subsequent bytes of memory that extend beyond the record, which could let a malicious user obtain sensitive information. NOTE: The developer disputes this as a vulnerability stating that If you give SQLite a corrupted database file and submit a query against the database, it might read parts of the database that you did not intend or expect.",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2024-13176",
+        "Package":"libssl3",
+        "Severity":"MEDIUM",
+        "Description":"Issue summary: A timing side-channel which could potentially allow recovering\nthe private key exists in the ECDSA signature computation.\n\nImpact summary: A timing side-channel in ECDSA signature computations\ncould allow recovering the private key by an attacker. However, measuring\nthe timing would require either local access to the signing application or\na very fast network connection with low latency.\n\nThere is a timing signal of around 300 nanoseconds when the top word of\nthe inverted ECDSA nonce value is zero. This can happen with significant\nprobability only for some of the supported elliptic curves. In particular\nthe NIST P-521 curve is affected. To be able to measure this leak, the attacker\nprocess must either be located in the same physical computer or must\nhave a very fast network connection with low latency. For that reason\nthe severity of this vulnerability is Low.\n\nThe FIPS modules in 3.4, 3.3, 3.2, 3.1 and 3.0 are affected by this issue.",
+        "Severity_Score":2,
+        "Risk_Score":20
+    },
+    {
+        "ID":"CVE-2022-27943",
+        "Package":"libstdc++6",
+        "Severity":"LOW",
+        "Description":"libiberty\/rust-demangle.c in GNU GCC 11.2 allows stack consumption in demangle_const, as demonstrated by nm-new.",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2023-4039",
+        "Package":"libstdc++6",
+        "Severity":"LOW",
+        "Description":"**DISPUTED**A failure in the -fstack-protector feature in GCC-based toolchains \nthat target AArch64 allows an attacker to exploit an existing buffer \noverflow in dynamically-sized local variables in your application \nwithout this being detected. This stack-protector failure only applies \nto C99-style dynamically-sized local variables or those created using \nalloca(). The stack-protector operates as intended for statically-sized \nlocal variables.\n\nThe default behavior when the stack-protector \ndetects an overflow is to terminate your application, resulting in \ncontrolled loss of availability. An attacker who can exploit a buffer \noverflow without triggering the stack-protector might be able to change \nprogram flow control to cause an uncontrolled loss of availability or to\n go further and affect confidentiality or integrity. NOTE: The GCC project argues that this is a missed hardening bug and not a vulnerability by itself.",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2013-4392",
+        "Package":"libsystemd0",
+        "Severity":"LOW",
+        "Description":"systemd, when updating file permissions, allows local users to change the permissions and SELinux security contexts for arbitrary files via a symlink attack on unspecified files.",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2023-31437",
+        "Package":"libsystemd0",
+        "Severity":"LOW",
+        "Description":"An issue was discovered in systemd 253. An attacker can modify a sealed log file such that, in some views, not all existing and sealed log messages are displayed. NOTE: the vendor reportedly sent \"a reply denying that any of the finding was a security vulnerability.\"",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2023-31438",
+        "Package":"libsystemd0",
+        "Severity":"LOW",
+        "Description":"An issue was discovered in systemd 253. An attacker can truncate a sealed log file and then resume log sealing such that checking the integrity shows no error, despite modifications. NOTE: the vendor reportedly sent \"a reply denying that any of the finding was a security vulnerability.\"",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2023-31439",
+        "Package":"libsystemd0",
+        "Severity":"LOW",
+        "Description":"An issue was discovered in systemd 253. An attacker can modify the contents of past events in a sealed log file and then adjust the file such that checking the integrity shows no error, despite modifications. NOTE: the vendor reportedly sent \"a reply denying that any of the finding was a security vulnerability.\"",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2023-50495",
+        "Package":"libtinfo6",
+        "Severity":"MEDIUM",
+        "Description":"NCurse v6.4-20230418 was discovered to contain a segmentation fault via the component _nc_wrap_entry().",
+        "Severity_Score":2,
+        "Risk_Score":20
+    },
+    {
+        "ID":"CVE-2013-4392",
+        "Package":"libudev1",
+        "Severity":"LOW",
+        "Description":"systemd, when updating file permissions, allows local users to change the permissions and SELinux security contexts for arbitrary files via a symlink attack on unspecified files.",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2023-31437",
+        "Package":"libudev1",
+        "Severity":"LOW",
+        "Description":"An issue was discovered in systemd 253. An attacker can modify a sealed log file such that, in some views, not all existing and sealed log messages are displayed. NOTE: the vendor reportedly sent \"a reply denying that any of the finding was a security vulnerability.\"",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2023-31438",
+        "Package":"libudev1",
+        "Severity":"LOW",
+        "Description":"An issue was discovered in systemd 253. An attacker can truncate a sealed log file and then resume log sealing such that checking the integrity shows no error, despite modifications. NOTE: the vendor reportedly sent \"a reply denying that any of the finding was a security vulnerability.\"",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2023-31439",
+        "Package":"libudev1",
+        "Severity":"LOW",
+        "Description":"An issue was discovered in systemd 253. An attacker can modify the contents of past events in a sealed log file and then adjust the file such that checking the integrity shows no error, despite modifications. NOTE: the vendor reportedly sent \"a reply denying that any of the finding was a security vulnerability.\"",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2022-0563",
+        "Package":"libuuid1",
+        "Severity":"LOW",
+        "Description":"A flaw was found in the util-linux chfn and chsh utilities when compiled with Readline support. The Readline library uses an \"INPUTRC\" environment variable to get a path to the library config file. When the library cannot parse the specified file, it prints an error message containing data from the file. This flaw allows an unprivileged user to read root-owned files, potentially leading to privilege escalation. This flaw affects util-linux versions prior to 2.37.4.",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2023-4641",
+        "Package":"login",
+        "Severity":"MEDIUM",
+        "Description":"A flaw was found in shadow-utils. When asking for a new password, shadow-utils asks the password twice. If the password fails on the second attempt, shadow-utils fails in cleaning the buffer used to store the first entry. This may allow an attacker with enough access to retrieve the password from the memory.",
+        "Severity_Score":2,
+        "Risk_Score":20
+    },
+    {
+        "ID":"CVE-2007-5686",
+        "Package":"login",
+        "Severity":"LOW",
+        "Description":"initscripts in rPath Linux 1 sets insecure permissions for the \/var\/log\/btmp file, which allows local users to obtain sensitive information regarding authentication attempts.  NOTE: because sshd detects the insecure permissions and does not log certain events, this also prevents sshd from logging failed authentication attempts by remote attackers.",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2023-29383",
+        "Package":"login",
+        "Severity":"LOW",
+        "Description":"In Shadow 4.13, it is possible to inject control characters into fields provided to the SUID program chfn (change finger). Although it is not possible to exploit this directly (e.g., adding a new user fails because \\n is in the block list), it is possible to misrepresent the \/etc\/passwd file when viewed. Use of \\r manipulations and Unicode characters to work around blocking of the : character make it possible to give the impression that a new user has been added. In other words, an adversary may be able to convince a system administrator to take the system offline (an indirect, social-engineered denial of service) by demonstrating that \"cat \/etc\/passwd\" shows a rogue user account.",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2024-56433",
+        "Package":"login",
+        "Severity":"LOW",
+        "Description":"shadow-utils (aka shadow) 4.4 through 4.17.0 establishes a default \/etc\/subuid behavior (e.g., uid 100000 through 165535 for the first user account) that can realistically conflict with the uids of users defined on locally administered networks, potentially leading to account takeover, e.g., by leveraging newuidmap for access to an NFS home directory (or same-host resources in the case of remote logins by these local network users). NOTE: it may also be argued that system administrators should not have assigned uids, within local networks, that are within the range that can occur in \/etc\/subuid.",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"TEMP-0628843-DBAD28",
+        "Package":"login",
+        "Severity":"LOW",
+        "Description":"No description available",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2022-0563",
+        "Package":"mount",
+        "Severity":"LOW",
+        "Description":"A flaw was found in the util-linux chfn and chsh utilities when compiled with Readline support. The Readline library uses an \"INPUTRC\" environment variable to get a path to the library config file. When the library cannot parse the specified file, it prints an error message containing data from the file. This flaw allows an unprivileged user to read root-owned files, potentially leading to privilege escalation. This flaw affects util-linux versions prior to 2.37.4.",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2023-50495",
+        "Package":"ncurses-base",
+        "Severity":"MEDIUM",
+        "Description":"NCurse v6.4-20230418 was discovered to contain a segmentation fault via the component _nc_wrap_entry().",
+        "Severity_Score":2,
+        "Risk_Score":20
+    },
+    {
+        "ID":"CVE-2023-50495",
+        "Package":"ncurses-bin",
+        "Severity":"MEDIUM",
+        "Description":"NCurse v6.4-20230418 was discovered to contain a segmentation fault via the component _nc_wrap_entry().",
+        "Severity_Score":2,
+        "Risk_Score":20
+    },
+    {
+        "ID":"CVE-2024-13176",
+        "Package":"openssl",
+        "Severity":"MEDIUM",
+        "Description":"Issue summary: A timing side-channel which could potentially allow recovering\nthe private key exists in the ECDSA signature computation.\n\nImpact summary: A timing side-channel in ECDSA signature computations\ncould allow recovering the private key by an attacker. However, measuring\nthe timing would require either local access to the signing application or\na very fast network connection with low latency.\n\nThere is a timing signal of around 300 nanoseconds when the top word of\nthe inverted ECDSA nonce value is zero. This can happen with significant\nprobability only for some of the supported elliptic curves. In particular\nthe NIST P-521 curve is affected. To be able to measure this leak, the attacker\nprocess must either be located in the same physical computer or must\nhave a very fast network connection with low latency. For that reason\nthe severity of this vulnerability is Low.\n\nThe FIPS modules in 3.4, 3.3, 3.2, 3.1 and 3.0 are affected by this issue.",
+        "Severity_Score":2,
+        "Risk_Score":20
+    },
+    {
+        "ID":"CVE-2023-4641",
+        "Package":"passwd",
+        "Severity":"MEDIUM",
+        "Description":"A flaw was found in shadow-utils. When asking for a new password, shadow-utils asks the password twice. If the password fails on the second attempt, shadow-utils fails in cleaning the buffer used to store the first entry. This may allow an attacker with enough access to retrieve the password from the memory.",
+        "Severity_Score":2,
+        "Risk_Score":20
+    },
+    {
+        "ID":"CVE-2007-5686",
+        "Package":"passwd",
+        "Severity":"LOW",
+        "Description":"initscripts in rPath Linux 1 sets insecure permissions for the \/var\/log\/btmp file, which allows local users to obtain sensitive information regarding authentication attempts.  NOTE: because sshd detects the insecure permissions and does not log certain events, this also prevents sshd from logging failed authentication attempts by remote attackers.",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2023-29383",
+        "Package":"passwd",
+        "Severity":"LOW",
+        "Description":"In Shadow 4.13, it is possible to inject control characters into fields provided to the SUID program chfn (change finger). Although it is not possible to exploit this directly (e.g., adding a new user fails because \\n is in the block list), it is possible to misrepresent the \/etc\/passwd file when viewed. Use of \\r manipulations and Unicode characters to work around blocking of the : character make it possible to give the impression that a new user has been added. In other words, an adversary may be able to convince a system administrator to take the system offline (an indirect, social-engineered denial of service) by demonstrating that \"cat \/etc\/passwd\" shows a rogue user account.",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2024-56433",
+        "Package":"passwd",
+        "Severity":"LOW",
+        "Description":"shadow-utils (aka shadow) 4.4 through 4.17.0 establishes a default \/etc\/subuid behavior (e.g., uid 100000 through 165535 for the first user account) that can realistically conflict with the uids of users defined on locally administered networks, potentially leading to account takeover, e.g., by leveraging newuidmap for access to an NFS home directory (or same-host resources in the case of remote logins by these local network users). NOTE: it may also be argued that system administrators should not have assigned uids, within local networks, that are within the range that can occur in \/etc\/subuid.",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"TEMP-0628843-DBAD28",
+        "Package":"passwd",
+        "Severity":"LOW",
+        "Description":"No description available",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2023-31484",
+        "Package":"perl-base",
+        "Severity":"HIGH",
+        "Description":"CPAN.pm before 2.35 does not verify TLS certificates when downloading distributions over HTTPS.",
+        "Severity_Score":3,
+        "Risk_Score":30
+    },
+    {
+        "ID":"CVE-2011-4116",
+        "Package":"perl-base",
+        "Severity":"LOW",
+        "Description":"_is_safe in the File::Temp module for Perl does not properly handle symlinks.",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2023-31486",
+        "Package":"perl-base",
+        "Severity":"LOW",
+        "Description":"HTTP::Tiny before 0.083, a Perl core module since 5.13.9 and available standalone on CPAN, has an insecure default TLS configuration where users must opt in to verify certificates.",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"TEMP-0517018-A83CE6",
+        "Package":"sysvinit-utils",
+        "Severity":"LOW",
+        "Description":"No description available",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2005-2541",
+        "Package":"tar",
+        "Severity":"LOW",
+        "Description":"Tar 1.15.1 does not properly warn the user when extracting setuid or setgid files, which may allow local users or remote attackers to gain privileges.",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"TEMP-0290435-0B57B5",
+        "Package":"tar",
+        "Severity":"LOW",
+        "Description":"No description available",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2022-0563",
+        "Package":"util-linux",
+        "Severity":"LOW",
+        "Description":"A flaw was found in the util-linux chfn and chsh utilities when compiled with Readline support. The Readline library uses an \"INPUTRC\" environment variable to get a path to the library config file. When the library cannot parse the specified file, it prints an error message containing data from the file. This flaw allows an unprivileged user to read root-owned files, potentially leading to privilege escalation. This flaw affects util-linux versions prior to 2.37.4.",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2022-0563",
+        "Package":"util-linux-extra",
+        "Severity":"LOW",
+        "Description":"A flaw was found in the util-linux chfn and chsh utilities when compiled with Readline support. The Readline library uses an \"INPUTRC\" environment variable to get a path to the library config file. When the library cannot parse the specified file, it prints an error message containing data from the file. This flaw allows an unprivileged user to read root-owned files, potentially leading to privilege escalation. This flaw affects util-linux versions prior to 2.37.4.",
+        "Severity_Score":1,
+        "Risk_Score":10
+    },
+    {
+        "ID":"CVE-2023-45853",
+        "Package":"zlib1g",
+        "Severity":"CRITICAL",
+        "Description":"MiniZip in zlib through 1.3 has an integer overflow and resultant heap-based buffer overflow in zipOpenNewFileInZip4_64 via a long filename, comment, or extra field. NOTE: MiniZip is not a supported part of the zlib product. NOTE: pyminizip through 0.2.6 is also vulnerable because it bundles an affected zlib version, and exposes the applicable MiniZip code through its compress API.",
+        "Severity_Score":4,
+        "Risk_Score":40
+    },
+    {
+        "ID":"CVE-2024-6345",
+        "Package":"setuptools",
+        "Severity":"HIGH",
+        "Description":"A vulnerability in the package_index module of pypa\/setuptools versions up to 69.1.1 allows for remote code execution via its download functions. These functions, which are used to download packages from URLs provided by users or retrieved from package index servers, are susceptible to code injection. If these functions are exposed to user-controlled inputs, such as package URLs, they can execute arbitrary commands on the system. The issue is fixed in version 70.0.",
+        "Severity_Score":3,
+        "Risk_Score":30
+    }
+]
