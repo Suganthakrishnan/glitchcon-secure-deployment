@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vulnerability Report - Secure Cloud Security System</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <!-- Chart.js for graphing vulnerabilities -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="output-bg">
+  <header>
+    <h1>Vulnerability Report</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="report-container">
+    <h2>Scan Results</h2>
+    <p><strong>File Scanned:</strong> <span id="fileName">Loading...</span></p>
+    <p><strong>Status:</strong> <span id="scanStatus">Loading...</span></p>
+    <h3>Detected Vulnerabilities:</h3>
+    <div id="vulnList">Loading...</div>
+    
+    <h3>Vulnerability Severity Graph</h3>
+    <canvas id="vulnChart"></canvas>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Secure Cloud Security System. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      let scanData = localStorage.getItem("scanResults");
+      if (!scanData) {
+        document.getElementById("vulnList").innerText = "No scan data found.";
+        return;
+      }
+      scanData = JSON.parse(scanData);
+
+      // Update file name and scan status
+      document.getElementById("fileName").textContent = scanData.file || "Unknown File";
+      document.getElementById("scanStatus").textContent = scanData.status || "Unknown Status";
+
+      // Display vulnerabilities with double-loop for nested data
+      let vulnListDiv = document.getElementById("vulnList");
+      vulnListDiv.innerHTML = ""; // Clear previous content
+      let severityCount = { Low: 0, Medium: 0, High: 0 };
+
+      if (Array.isArray(scanData.vulnerabilities) && scanData.vulnerabilities.length > 0) {
+        scanData.vulnerabilities.forEach(resultObj => {
+          if (resultObj.Vulnerabilities && Array.isArray(resultObj.Vulnerabilities)) {
+            resultObj.Vulnerabilities.forEach(vuln => {
+              let div = document.createElement("div");
+              div.innerHTML = `<p>
+                <strong>ID:</strong> ${vuln.VulnerabilityID} | 
+                <strong>Severity:</strong> ${vuln.Severity} | 
+                <strong>Description:</strong> ${vuln.Description}
+              </p>`;
+              vulnListDiv.appendChild(div);
+
+              // Count severities for graph data
+              let severity = vuln.Severity;
+              if (severity === "Low") severityCount.Low++;
+              else if (severity === "Medium") severityCount.Medium++;
+              else if (severity === "High") severityCount.High++;
+            });
+          }
+        });
+      } else {
+        vulnListDiv.innerHTML = "<p>No vulnerabilities detected.</p>";
+      }
+
+      // Create the chart using Chart.js
+      const ctx = document.getElementById('vulnChart').getContext('2d');
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['Low', 'Medium', 'High'],
+          datasets: [{
+            label: 'Vulnerabilities Count',
+            data: [severityCount.Low, severityCount.Medium, severityCount.High],
+            backgroundColor: ['green', 'orange', 'red']
+          }]
+        },
+        options: {
+          responsive: true,
+          scales: {
+            y: { beginAtZero: true }
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>
