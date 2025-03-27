@@ -39,8 +39,10 @@ This project aims to:
                                  2.upon uploading a file in the web application form the image is scanned using the previous steps we find the vulnerabilities present in the file.
 to check this we did a brute-force attack on the web application and monitored the "data log sheet" simultaneously. and then found the vulnerabilities.
 
-4.integrating everything into a devSecOps for secure software development:
-        we initially had an idea of using github for the workflow to monitor
+FLAWS :
+
+1.we couldn't bring a real time large data base so we had to work wiht smaller sample.
+2. we couldn't integrate the DevSecOps and complete it and deploy it as a complete software.
 
 
   
