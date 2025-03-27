@@ -1,0 +1,40 @@
+name: DevSecOps Security Scan v2
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:  # Allows manual trigger from GitHub Actions
+
+jobs:
+  security_scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install Dependencies
+        run: |
+          pip install --upgrade pip
+          pip install safety bandit trivy
+
+      - name: Run Security Scans
+        run: |
+          echo "Running Bandit for Python security issues..."
+          bandit -r . || true
+          
+          echo "Running Safety to check dependencies..."
+          safety check || true
+
+      - name: Run Trivy Scan
+        run: |
+          echo "Scanning Docker container with Trivy..."
+          trivy fs --severity HIGH,CRITICAL --format table .
